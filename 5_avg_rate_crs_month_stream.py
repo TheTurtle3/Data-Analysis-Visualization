@@ -63,7 +63,7 @@ chart_def = """
                 y: 30,
                 yAxis: 0
             },
-            text: 'Cancelled<br>during<br>World War II'
+            text: 'Course Lanuched'
         }, {
             point: {
                 x: 18,

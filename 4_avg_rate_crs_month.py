@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 data = pandas.read_csv("reviews.csv", parse_dates=['Timestamp'])
 data['Month'] = data['Timestamp'].dt.strftime('%Y-%m')
-month_average_crs = data.groupby(['Month', 'Course Name']).mean().unstack()
+month_average_crs = data.groupby(['Month', 'Course Name']).count().unstack()
 
 chart_def = """
 {
@@ -22,7 +22,7 @@ chart_def = """
         verticalAlign: 'top',
         x: 150,
         y: 100,
-        floating: true,
+        floating: false,
         borderWidth: 1,
         backgroundColor:
             '#FFFFFF'
